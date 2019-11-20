@@ -1,0 +1,6 @@
+From	centos:7
+RUN		apt-get update
+RUN		apt-get -y install httpd
+RUN		echo "<h1> Welcome</h1>" > /var/www/html/index.html/index
+EXPOSE	80
+CMD		httpd -D FOREGROUND	
